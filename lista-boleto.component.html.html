@@ -1,0 +1,30 @@
+<table class="table table-borderless table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Editar</th>
+	  <th scope="col">Borrar</th>
+	  
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Boleto of clientes">
+      <th scope="row">1</th>
+      <td>{{Boleto.Bol_cod}}</td>
+      <td>{{Boleto.Bol_nom}}</td>
+	  <td><button class="btn btn-outline-warning" routerLink="/editar/{{Boleto.Bol_cod}}">
+	  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Editar </button></td>
+	  <td><button>  </button></td>
+	  
+	  <td><button class="btn btn-outline-danger"(click)="borrar(Boleto.Bol_cod)">
+	  <i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </button></td>
+	  <td><button>  </button></td>
+    </tr>
+   
+   
+   
+   
+   
+  </tbody>
+</table>

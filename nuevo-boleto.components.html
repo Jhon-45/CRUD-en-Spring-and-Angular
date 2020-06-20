@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="codigo">Codigo</label>
+                    <input type="number" class="form-control" id="codigo" name="codigo"
+                    [(ngModel)]="Bol_cod" required>
+                </div>
+				
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                    [(ngModel)]="Bol_nom" required>
+                </div>
+				
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear Boleto</button>
+            </form>
+        </div>
+    </div>
+</div>

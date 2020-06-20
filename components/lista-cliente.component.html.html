@@ -1,0 +1,34 @@
+<table class="table table-borderless table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Editar</th>
+	  <th scope="col">Borrar</th>
+	  
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <th scope="row">1</th>
+      <td>{{cliente.Cli_cod}}</td>
+      <td>{{cliente.Cli_nom}}</td>
+      <td>{{cliente.Cli_tel}}</td>
+	   <td>{{cliente.Cli_cor}}</td>
+	  <td><button class="btn btn-outline-warning" routerLink="/editar/{{cliente.Cli_cod}}">
+	  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Editar </button></td>
+	  <td><button>  </button></td>
+	  
+	  <td><button class="btn btn-outline-danger"(click)="borrar(cliente.Cli_cod)">
+	  <i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar </button></td>
+	  <td><button>  </button></td>
+    </tr>
+   
+   
+   
+   
+   
+  </tbody>
+</table>
